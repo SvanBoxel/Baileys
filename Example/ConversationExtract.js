@@ -91,7 +91,7 @@ function extractChats (authCreds, outputFile, produceAnonData=false, offset=null
     }
     client.connect (authCreds)
     .then (() => extract())
-    .catch (err => console.log("got error: " + error))
+    .catch (err => console.log("got error: " + err))
 }
 let creds = null//JSON.parse(fs.readFileSync("auth_info.json"))
 extractChats(creds, "output.csv")
